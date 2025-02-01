@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>introsection</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='introsection.css'>
+</head>
+<body>
+
+    <!--  navbar  -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo1.png">
+        </div>
+        <div class="navlinks">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#aisummarize" class="nav-link">AI SUMMARIZE</a>
+            <a href="#contact" class="nav-link">STUDY PROGRESS</a>
+            <a href="#reach-us" class="nav-link">ABOUT US</a>
+        </div>
+        
+    </nav>
+
+    <section id="introsection">
+        <div class="main_box">     
+         <div class="title_box"><h1 class="project_title">AI QUEST</h1></div> 
+         <div class="typebox"><div id="app"></div></div>
+        </div> 
+         
+    </section>
+    <section id="aisummarize">
+        <div class="container" data-aos="fade-left">
+            <div class="card-des">
+                <div class="heading"><h1>AI SUMMARIZE</h1></div>
+                <div class="details">
+                    <div class="left"><img class="sketch" src="sketch.png"></div>
+                    <div class="right">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit hic numquam cupiditate asperiores harum, unde, atque facilis neque distinctio quo corporis mollitia iusto dolorem eos dicta! Cum autem pariatur ducimus.</p>
+                        <div class="ai_button"><a href="#">SUMMARIZE</a></div>
+                    </div>
+                </div>   
+            </div>  
+        </div> 
+    </section>
+    
+
+    
+    <section id="contact"> <h1>Contact Section</h1> </section>
+    <section id="reach-us"> <h1>Reach Us Section</h1> </section>
+
+
+    <!-- // javascript for active navbar links -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    document.querySelector(`.nav-link[href="#${entry.target.id}"]`).classList.add("active");
+                }
+            });
+        }, { threshold: 0.6 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+ 
+    <!-- javascript for typewriter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.21.0/core.min.js" integrity="sha512-fo6X5UXaTRf/mHuTYJBR3Q/rpPa+LB2KUyDMROluMkZnfEEF4DhQyI5AHRoAe/zzu1Ty58MMmZXG4SuVEpXsng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var app = document.getElementById('app');
+
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+
+        typewriter.typeString('Your smart<br>est study<br> buddy<br>')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('<strong>Always <br>learning <br>Always <br>adapting <br>with u !!!</strong>')
+            .pauseFor(2500)
+            .start();
+            document.getElementById('typewriter').style.color = "blue";
+            document.getElementById('typewriter').style.fontSize = "24px";
+            document.getElementById('typewriter').style.fontWeight = "bold";    
+    </script>    
+</body>
+</html>
