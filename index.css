@@ -1,0 +1,118 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "poppins",sans-serif;
+}
+body
+{
+ background:#f2eeff;   
+}
+footer{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    background:linear-gradient(to top,#00093c,#2d0b00);
+    color:#fff;
+    padding:100px 0 30px;
+    font-size:13px;
+    line-height:20px ;
+    border-top-left-radius:125px ;
+    border-top-right-radius:125px ;
+}
+.row
+{
+ width:85%;
+ margin:auto;
+ display:flex;
+ flex-wrap:wrap;
+ align-items: flext-start;
+ justify-content: space-between;   
+}
+.col
+{
+flex-basis: 25%;
+padding:10px;
+}
+.col:nth-child(2)
+{
+  flex-basis:15%;
+}
+.col h3
+{
+ width:fit-content;
+ margin-bottom:40px;
+ position:relative;
+
+}
+.questlogo
+{
+ width:80px;
+ height:80px;
+ border-radius: 50%;
+ margin-bottom: 30px;
+ align-self: center; 
+}
+.social_icons.fab{
+width:40px;
+height:40px;
+}
+ul li
+{
+ list-style:none;
+ margin-bottom:12px;
+}
+ul li a
+{
+  text-decoration: none;
+  color: white;
+}
+form{
+  padding-bottom: 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #ccc ;
+  margin-bottom:50px
+}
+form input{
+  width:100%;
+  background:transparent;
+  color:#ccc;
+  border:0;
+  outline:none;
+
+}
+.icons
+{
+ width: 40px;
+ height:50px;
+ margin-bottom: 40px;
+ border-radius:50%;
+ text-align:centre;
+ line-height:40px;
+ font-size:60px ;
+ color:#000;
+ background:#fff;
+ margin-right:15px ;
+ padding:2% 
+  
+}
+}
+form button
+{
+  background:transparent;
+  border:0;
+  outline:none;
+  size:5% ;
+}
+hr{
+width:90%;
+border:0;
+border-bottom:1px solid #ccc ;
+margin:20px auto;
+}
+.cpy
+{
+ text-align:center; 
+}
